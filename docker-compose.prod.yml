@@ -15,7 +15,7 @@ services:
   backend:
     # Notice this is "image" instead of "build"! 
     # Replace <your_dockerhub_username> with your actual DockerHub username.
-    image: <your_dockerhub_username>/mern-auth-backend:latest
+    image: <lakshan0>/mern-auth-backend:latest
     container_name: mern-backend-prod
     ports:
       - "5000:5000"
@@ -31,7 +31,7 @@ services:
   # --- Frontend React Web Service ---
   frontend:
     # Replace <your_dockerhub_username> with your actual DockerHub username.
-    image: <your_dockerhub_username>/mern-auth-frontend:latest
+    image: <lakshan0>/mern-auth-frontend:latest
     container_name: mern-frontend-prod
     ports:
       - "80:80" # Maps port 80 to Nginx port 80 inside container
