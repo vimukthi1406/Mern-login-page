@@ -5,7 +5,10 @@ import connectDB from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import authRoutes from './routes/authRoutes.js';
 
-dotenv.config();
+// Only load .env file if we are developing locally
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
+}
 
 // Connect to MongoDB
 connectDB();
